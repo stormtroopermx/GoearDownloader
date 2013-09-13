@@ -1,0 +1,40 @@
+LOCAL loReq
+LOCAL loHttp
+LOCAL lnSuccess
+LOCAL lcDomain
+LOCAL lnPort
+LOCAL lnSsl
+LOCAL loResp
+
+loReq = CreateObject('Chilkat.HttpRequest')
+loHttp = CreateObject('Chilkat.Http')
+
+*  Any string unlocks the component for the 1st 30-days.
+lnSuccess = loHttp.UnlockComponent("Anything for 30-day trial")
+IF (lnSuccess <> 1) THEN
+    =MESSAGEBOX(loHttp.LastErrorText)
+    QUIT
+ENDIF
+
+*  Note: You must first replace the domain and path of this example with real values.
+*  There is nothing at http://www.chilkatsoft.com/something.asp
+
+*  Build an XMLHTTP request.  The XML passed to UseXmlHttp is sent
+*  in the body of the request.
+loReq.UseXmlHttp("<test>This is the XML to be sent</test>")
+loReq.Path = "/something.asp"
+
+*  Send the HTTP POST and get the response.  Note: This is a blocking call.
+*  The method does not return until the full HTTP response is received.
+
+lcDomain = "www.chilkatsoft.com"
+lnPort = 80
+lnSsl = 0
+
+loResp = loHttp.SynchronousRequest(lcDomain,lnPort,lnSsl,loReq)
+IF (loResp = NULL ) THEN
+    ? loHttp.LastErrorText
+ELSE
+    *  Display the body of the response.
+    ? loResp.BodyStr
+ENDIF

@@ -1,0 +1,22 @@
+#Define ChilkatKey				'MzAyNzcxMjkyNDA='
+#Define SearchURL				'http://www.goear.com/search/'
+#Define ResultTagBegin			'<ol id="search_results">'
+#Define ResultTagEnd			'</ol>'
+#Define ArtistTagBegin 			'<span class="group">'
+#Define ArtistTagEnd			'</span>'
+#Define SongNameTagBegin		'<span class="song">'
+#Define SongNameTagEnd			'</span>'
+#Define SongURLTagBegin			'href="'
+#Define SongURLTagEnd			'"'
+#Define KbpsTagBegin			'<li class="kbps radius_3">'
+#Define KbpsTagEnd				'<'
+#Define LengthTagBegin			'<li class="length radius_3">'
+#Define LengthTagEnd			'</li>'
+#Define PaginationTagBegin		'<ol id="new_pagination">'
+#Define PaginationTagEnd		'</ol>'
+#Define URLIdTagBegin			'/listen/'
+#Define URLIdTagEnd				'/'
+#Define MP3URLGet				'http://www.goear.com/action/sound/get/'
+#Define BadTags					"<span class='your_search'>"
+#Define OAuth_ConsumerKey 		"REpqcDhuMkFFOE15ekRuTWhqbGVSdw=="
+#Define OAuth_ConsumerSecret	"UlA3MGdianBtU3FTWWMwS2VKT1ZKQll3RUJoNmtkUDVOMk5zMEdmOA=="
